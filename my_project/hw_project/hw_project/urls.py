@@ -17,10 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from noteapp import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("quotes.urls")),
-    #path("users/", include("users.urls"))
+    path("", include("quotes.urls")),  
+    path("noteapp/", include("noteapp.urls")), 
+    path("accounts/", include("accounts.urls")),
 ]
 

@@ -11,17 +11,19 @@
 <body>
 
     <div class="container">
-        <div class="row header-box">
+        <div class="row header-box pt-3 mb-3">
             <div class="col-md-8">
                 <h1>
                     <a href="/" style="text-decoration: none">Quotes to Scrape</a>
                 </h1>
             </div>
+            <a href="{% url 'noteapp:add_quote' %}" class="btn btn-success">Додати цитату</a>
+
             <div class="col-md-4">
                 <p>
-                    <a href="/login">SingUp</a>
-                    <a href="/login">Login</a>
-                    <a href="/login">Logout</a>
+                    <a href="{% url 'signup' %}" class="btn btn-primary">SingUp</a>
+                    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                    <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
                 
                 </p>
             </div>
